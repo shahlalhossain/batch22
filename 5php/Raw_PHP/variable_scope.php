@@ -29,9 +29,9 @@
 
             $number1 = "555555555"; // global scope
 
-            myTest1($number1);
+            myTest1( $number1);
 
-            function myTest1($number1) {
+            function myTest1( $number1) {
                 // using $number1 inside this function will generate an error
                 echo "<p>Variable number1 inside function is: $number1</p>";
             }
@@ -39,15 +39,18 @@
             echo "<p>Variable number1 outside function is: $number1</p>";
 
 
+            #####################################################################
+            
+            myTest2();
+
             function myTest2() {
                 $number2 = 5000; // local scope
                 echo "Variable number2 inside function is: ".$number2;
             }
-
-            myTest2();
+            
             // using number2 outside the function will generate an error
             $number2 = '465456465';
-            echo "<p>Variable x outside function is: $number2</p>";
+            echo "<p>Variable number2 outside function is: $number2</p>";
 
             ?>
         </div>

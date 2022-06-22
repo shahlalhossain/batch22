@@ -43,7 +43,18 @@
         echo "<br>";
 
         // PHP Array
-        // $countries = array("Bangladesh", "Japan", "Canada", "Thailand", "India", "German", "Spain");
+        $countries = array("Bangladesh", "Japan", "Canada", "Thailand", "India", "German", "Spain");
+        $countries = [
+            0 => "Bangladesh",
+            1 => "Japan",
+            2 => "Canada",
+            3 => "Thailand",
+            4 => "India",
+            5 => "German",
+            6 => "Spain"
+        ];
+
+        var_dump($countries);
 
         $countries = [
             'country1' => 'Japan',
@@ -53,11 +64,11 @@
             5 => 25555,
             6 => true,
 
-            7 => ["Bangladesh", "Japan", "Canada", "Thailand", "India", "German", "Spain"],
+            7 => ["Mango", "Banana", "Orange", "Apple", "Watermelon", "Jackfruit", "Pineapple"],
             8 => NULL,
             9 => " ",
         ];
-        var_dump($countries[7]);
+        var_dump($countries[6]);
         echo "<br>";
         echo "<br>";
         echo "<br>";
@@ -67,10 +78,12 @@
         echo (pi()); // returns 3.1415926535898
         echo "<br>";
 
-        echo (min(0, 150, 30, 20, -8, -200)); // returns -200
+        $array1 = [0, 150, 30, 20, -8, -200];
+        echo (min($array1)); // returns -200
         echo "<br>";
 
-        echo (max(0, 150, 30, 20, -8, -200)); // returns 150
+        $array2 = [0, 150, 30, 20, -8, -200];
+        echo (max($array2)); // returns 150
         echo "<br>";
          
         echo (abs(-6.7)); // returns 6.7
